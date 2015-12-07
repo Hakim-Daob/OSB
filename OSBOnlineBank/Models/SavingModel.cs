@@ -7,5 +7,6 @@ namespace OSBOnlineBank.Models
 {
     public class SavingModel
     {
+        // jagjigj
     }
 }
