@@ -8,6 +8,7 @@ namespace OSBOnlineBank.Models
 {
     public class BankAccount
     {
+        public int Id { get; set; }
         public string AccountNumber { get; set; }
 
         public double Balance { get; set; }
@@ -17,6 +18,5 @@ namespace OSBOnlineBank.Models
 
         public string BankUserId { get; set; }
 
-        //public virtual ICollection<Transaction> Transactions { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace OSBOnlineBank.Models
@@ -68,6 +69,36 @@ namespace OSBOnlineBank.Models
         [EmailAddress]
         [Display(Name = "Email")]
         public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "First name")]
+        public string FirstName { get; set; }
+
+        [Required]
+        [Display(Name = "Last name")]
+        public string LastName { get; set; }
+
+        
+
+        [Display(Name = "BirthDate")]
+        [DataType(DataType.Date)]
+        public DateTime BirthDate { get; set; }
+
+        [Display(Name = "Address")]
+        public string Address { get; set; }
+
+        [Display(Name = "PhoneNumber")]
+        public string PhoneNumber { get; set; }
+
+        [Display(Name = "IdNumber")]
+        public string IdNumber { get; set; }
+
+        [Display(Name = "Nationality")]
+        public string Nationality { get; set; }
+
+        [Display(Name = "Gender")]
+        public string Gender { get; set; }
+
 
         [Required]
         [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
