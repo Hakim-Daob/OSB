@@ -78,7 +78,7 @@ namespace OSBOnlineBank.Models
         [Display(Name = "Last name")]
         public string LastName { get; set; }
 
-        
+
 
         [Display(Name = "BirthDate")]
         [DataType(DataType.Date)]

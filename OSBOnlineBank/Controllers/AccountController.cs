@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using OSBOnlineBank.Models;
+using OSBOnlineBank.Views.Services;
 
 namespace OSBOnlineBank.Controllers
 {
@@ -155,9 +156,13 @@ namespace OSBOnlineBank.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var bankUserService = new BankUserService();
+                    bankUserService.CreateBankUser(model.FirstName, model.LastName, model.Email, model.Address, model.BirthDate, model.PhoneNumber, model.IdNumber, model.Nationality, model.Gender, user.Id);
+                  
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
-                    // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+
+
+                    //  For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
