@@ -30,7 +30,7 @@ namespace OSBOnlineBank.Models
             return new ApplicationDbContext();
         }
         public DbSet<BankUser> BankUsers { get; set; }
-        //public DbSet<BankAccount> BankAccounts { get; set; }
+        public DbSet<BankAccount> BankAccounts { get; set; }
 
     }
 }

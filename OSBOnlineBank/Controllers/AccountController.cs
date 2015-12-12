@@ -157,8 +157,11 @@ namespace OSBOnlineBank.Controllers
                 if (result.Succeeded)
                 {
                     var bankUserService = new BankUserService();
-                    bankUserService.CreateBankUser(model.FirstName, model.LastName, model.Email, model.Address, model.BirthDate, model.PhoneNumber, model.IdNumber, model.Nationality, model.Gender, user.Id);
-                  
+                    var bankAccountService = new BankAccountService();
+                    BankUser bankUser=bankUserService.CreateBankUser(model.FirstName, model.LastName, model.Email, model.Address, model.BirthDate, model.PhoneNumber, model.PassportNo, model.Nationality, model.Gender, user.Id);
+                    bankAccountService.CreateBankAccount(0, bankUser.BankUserId);
+                    
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
 

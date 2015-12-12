@@ -11,7 +11,7 @@ namespace OSBOnlineBank.Models
 {
     public class BankUser
     {
-        public int Id { get; set; }
+        public int BankUserId { get; set; }
 
         public string FirstName { get; set; }
 
@@ -25,18 +25,19 @@ namespace OSBOnlineBank.Models
 
         public string PhoneNumber { get; set; }
 
-        public string IdNumber { get; set; }
+        public string PassportNo { get; set; }
 
         public string Nationality { get; set; }
 
         public string Gender { get; set; }
 
+   //     [Required]
+        public string ApplicationUserId { get; set; }
         public virtual ApplicationUser User { get; set; }
 
-        [Required]
-        public string ApplicationUserId { get; set; }
+       
 
-       // public virtual ICollection<BankAccount> BankAccounts { get; set; }
+        public virtual ICollection<BankAccount> BankAccounts { get; set; }
 
     }
 }
