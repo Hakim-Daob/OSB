@@ -11,7 +11,7 @@ namespace OSBOnlineBank.Views.Services
         private ApplicationDbContext db= new ApplicationDbContext();
 
 
-        public BankUser CreateBankUser(string firstName, string lastName, string email, string address, DateTime birthDate, string phoneNumber, string passportNo, string nationality, string gender, string applicationUserId)
+        public BankUser CreateBankUser(string firstName, string lastName, string email, string address, DateTime birthDate, string phoneNumber, string personalId, string nationality, string gender, string applicationUserId)
         {
             BankUser bankUser = new BankUser();
 
@@ -21,7 +21,7 @@ namespace OSBOnlineBank.Views.Services
             bankUser.Address=address;
             bankUser.BirthDate=birthDate;
             bankUser.PhoneNumber=phoneNumber;
-            bankUser.PassportNo = passportNo;
+            bankUser.PersonalId = personalId;
             bankUser.Nationality=nationality;
             bankUser.Gender=gender;
             bankUser.ApplicationUserId = applicationUserId;

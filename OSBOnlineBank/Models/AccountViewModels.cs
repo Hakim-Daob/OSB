@@ -90,8 +90,8 @@ namespace OSBOnlineBank.Models
         [Display(Name = "PhoneNumber")]
         public string PhoneNumber { get; set; }
 
-        [Display(Name = "PassportNo")]
-        public string PassportNo { get; set; }
+        [Display(Name = "PersonalId")]
+        public string PersonalId { get; set; }
 
         [Display(Name = "Nationality")]
         public string Nationality { get; set; }

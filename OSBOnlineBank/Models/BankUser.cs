@@ -25,7 +25,7 @@ namespace OSBOnlineBank.Models
 
         public string PhoneNumber { get; set; }
 
-        public string PassportNo { get; set; }
+        public string PersonalId { get; set; }
 
         public string Nationality { get; set; }
 

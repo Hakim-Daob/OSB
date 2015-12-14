@@ -31,6 +31,7 @@ namespace OSBOnlineBank.Models
         }
         public DbSet<BankUser> BankUsers { get; set; }
         public DbSet<BankAccount> BankAccounts { get; set; }
+        public DbSet<Transaction> Transactions { get; set; } 
 
     }
 }

@@ -158,7 +158,7 @@ namespace OSBOnlineBank.Controllers
                 {
                     var bankUserService = new BankUserService();
                     var bankAccountService = new BankAccountService();
-                    BankUser bankUser=bankUserService.CreateBankUser(model.FirstName, model.LastName, model.Email, model.Address, model.BirthDate, model.PhoneNumber, model.PassportNo, model.Nationality, model.Gender, user.Id);
+                    BankUser bankUser = bankUserService.CreateBankUser(model.FirstName, model.LastName, model.Email, model.Address, model.BirthDate, model.PhoneNumber, model.PersonalId, model.Nationality, model.Gender, user.Id);
                     bankAccountService.CreateBankAccount(0, bankUser.BankUserId);
                     
 

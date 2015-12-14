@@ -12,10 +12,11 @@ namespace OSBOnlineBank.Models
         public string AccountNumber { get; set; }
 
         public decimal Balance { get; set; }
-        public virtual BankUser BankUser { get; set; }
+       // public virtual BankUser BankUser { get; set; }
         public int BankUserId { get; set; }
+        public virtual BankUser BankUser { get; set; }
+        public virtual ICollection<Transaction> Transactions { get; set; }
 
-        
 
     }
 }
